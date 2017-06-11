@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VisionAPISample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="iRc-Cd-MHa">
+                                <rect key="frame" x="101.5" y="244.5" width="172" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="Zr6-Hy-wVY"/>
+                                    <constraint firstAttribute="width" constant="172" id="vuy-FU-l5b"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-fH-Rce">
+                                <rect key="frame" x="164" y="436" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYy-hf-Ysp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iRc-Cd-MHa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D6D-Af-dLH"/>
+                            <constraint firstItem="iRc-Cd-MHa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LvA-s7-xWs"/>
+                            <constraint firstItem="WEk-fH-Rce" firstAttribute="top" secondItem="iRc-Cd-MHa" secondAttribute="bottom" constant="13.5" id="b4f-Tx-LjE"/>
+                            <constraint firstItem="WEk-fH-Rce" firstAttribute="centerX" secondItem="iRc-Cd-MHa" secondAttribute="centerX" id="syN-OB-cWB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="faceImage" destination="iRc-Cd-MHa" id="5QN-Ox-0wm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="face" width="172" height="178"/>
+    </resources>
+</document>
